@@ -2,7 +2,7 @@ var gasStations, tipGas, timestampPriceChange, timestampPriceCheck;
 var gasStationsData;
 
 function loadGasStations() {
-    d3.json("https://apis.is/petrol", function(error, json) {
+    d3.json("https://www.apis.is/petrol", function(error, json) {
         if(error)
             return console.error("Petrol data error: ", error);
         
