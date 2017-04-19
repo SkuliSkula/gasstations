@@ -9,7 +9,8 @@ var iceland, map;
 
 //Load in GeoJSON data
 function loadGeoJSONData() {
-    d3.json("/data/iceland_min.geojson", function (error, data) {
+    d3.json("https://gist.githubusercontent.com/SkuliSkula/40b3417bd04c785faeadff3396c19c79/raw/1258f84e8ab2224819dfa7c9ba6383a4bcfa0ed5/iceland_min.geosjon", 
+            function (error, data) {
         if (error) {
             return console.error(error);
         }    
