@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gas stations in Iceland</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="scripts/iceland.js"></script>
+    <script type="text/javascript" src="scripts/gasstations.js"></script>
+    <script type="text/javascript" src="scripts/d3tip.js"></script>
+    <link rel="stylesheet" href="css/gasstations.css">    
+    <link rel="stylesheet" href="css/styles.css">    
+    </head>
+
+<body>
+    <script type="text/javascript">
+        document.body.onload = function(){
+            loadGeoJSONData();
+        };
+        
+    </script>
+    <div id="pricelabels">
+        <div>
+            <label class="info">Last price check: <span class="badge" id="priceCheck"></span></label>
+        </div>
+        <div>
+            <label class="info">Last price change: <span class="badge" id="priceChange"></span></label>
+        </div>
+        <div>
+            <label class="info">Places with lowest price --> <span class="info" id="lowestPriceTxt"></span> <span class="badge" id="lowestPrice"></span></label>
+        </div>
+        <div>
+            <label class="info">Highest price: <span class="badge" id="highestPrice"></span></label>
+        </div>
+    </div>
+    <div id="map">
+    </div>
+</body>
+</html>
