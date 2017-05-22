@@ -5,8 +5,7 @@ function loadGasStations() {
     d3.json("https://www.apis.is/petrol", function(error, json) {
         if(error)
             return console.error("Petrol data error: ", error);
-        
-        console.log(json);
+
         gasStationsData = json;
         initGasStations(json);
         setTimeStamps(json);
@@ -103,6 +102,7 @@ function getGasstationsNames(json) {
     json.results.map(function(d){
         gasstations.add(d.company);
     });
+    console.log(gasstations);
     return gasstations;
 }
 
